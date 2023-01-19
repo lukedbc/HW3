@@ -33,11 +33,6 @@ function calculateSquare() {
     displayResult(resultArray);
 }
 
-let calculateCubeFunction = function(_) {
-    let resultArray = origArray.map(cubeOfNumber);
-    displayResult(resultArray);
-}
-
 function calculateFourth(_) {
     let resultArray = origArray.map(fourthOfNumber);
     displayResult(resultArray);
@@ -45,6 +40,9 @@ function calculateFourth(_) {
 
 document.addEventListener("DOMContentLoaded", function(_) {
 
-    getElement("cube-button").addEventListener("click", calculateCubeFunction);
+    getElement("cube-button").addEventListener("click", function(_) {
+        let resultArray = origArray.map(cubeOfNumber);
+        displayResult(resultArray);
+    });
     getElement("to-the-fourth-button").addEventListener("click", calculateFourth);
 });
